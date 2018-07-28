@@ -52,9 +52,39 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#string').innerHTML = mnpString;
     console.log(mnpString);
   }
+  //this one doesn;t seem to work and it's the solution, so, you know
+  document.querySelector('#target').addEventListener('onload', animate_string);
+  function animate_string(id) {
+    const element = document.getElementById(id);
+    const textNode = element.childNodes[0]; // assuming no other children
+    let text = textNode.data;
 
-// 6. Write a JavaScript program to determine whether a given year is a leap year 
-// in the Gregorian calendar.
+    setInterval(() => {
+      text = text[text.length - 1] + text.substring(0, text.length - 1);
+      textNode.data = text;
+    }, 100);
+  }
+
+  // 6. Write a JavaScript program to determine whether a given year is a leap year
+  // in the Gregorian calendar.
+
+
+  function isLeap(year){
+    if(!year % 100 === 0){
+      console.log('it is not a leap year');
+    } else if(!year % 400 === 0){
+      console.log('it is not a leap year');
+    }else if(!year % 4 === 0){
+      console.log('it is not a leap year');
+    } else {
+      console.log('it is a leap year');
+    }
+
+  }
+
+  isLeap(2018);
+  isLeap(2016);
+  isLeap(2000);
 
 
 });
