@@ -37,9 +37,24 @@ window.addEventListener('DOMContentLoaded', function() {
 
   const areaOfTriangle = Math.sqrt(p * (p - a) * (p - b ) * (p - c));
   document.querySelector('#area').innerHTML = areaOfTriangle;
-  // 
+  //
   // 5. Write a JavaScript program to rotate the string 'w3resource' in right direction
   // by periodically removing one letter from the end of the string and attaching it to the front.
+
+  const theString = 'w3resource';
+
+  document.querySelector('#string').innerHTML = theString;
+
+  document.querySelector('.stringButton').addEventListener('click', manipulateString);
+
+  function manipulateString() {
+    let mnpString = theString.slice(0, -1);
+    document.querySelector('#string').innerHTML = mnpString;
+    console.log(mnpString);
+  }
+
+// 6. Write a JavaScript program to determine whether a given year is a leap year 
+// in the Gregorian calendar.
 
 
 });
