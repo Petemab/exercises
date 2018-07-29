@@ -33,9 +33,9 @@ window.addEventListener('DOMContentLoaded', function() {
   const a = 5;
   const b = 6;
   const c = 7;
-  const p = (a + b + c)/2;
+  const p = (a + b + c) / 2;
 
-  const areaOfTriangle = Math.sqrt(p * (p - a) * (p - b ) * (p - c));
+  const areaOfTriangle = Math.sqrt(p * (p - a) * (p - b) * (p - c));
   document.querySelector('#area').innerHTML = areaOfTriangle;
   //
   // 5. Write a JavaScript program to rotate the string 'w3resource' in right direction
@@ -68,7 +68,6 @@ window.addEventListener('DOMContentLoaded', function() {
   // 6. Write a JavaScript program to determine whether a given year is a leap year
   // in the Gregorian calendar.
 
-
   // function isLeap(year){
   //   if(!year % 100 === 0){
   //     console.log('it is not a leap year');
@@ -82,8 +81,8 @@ window.addEventListener('DOMContentLoaded', function() {
   //
   // }
 
-  function isLeap(year){
-    if(year % 100 === 0 && year % 100 === 0 && year % 4 === 0){
+  function isLeap(year) {
+    if (year % 100 === 0 && year % 100 === 0 && year % 4 === 0) {
       console.log('this is a leap year');
     } else {
       console.log('this is not a leap year');
@@ -98,10 +97,37 @@ window.addEventListener('DOMContentLoaded', function() {
   // x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
   // console.log(x);
 
+  // 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
 
-// 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
 
-  
+
+
+  function findSundays() {
+    for (let year = 2014; year <= 2050; year++) {
+      const janFirst = new Date(year, 0, 1);
+      if (janFirst.getDay() === 0) {
+        console.log(`1st of January is a Sunday in ${year}`);
+      }
+    }
+  }
+
+  findSundays();
+
+  // 8. Write a JavaScript program where the program takes a random integer between
+  // 1 to 10, the user is then prompted to input a guess number. If the user input
+  // matches with guess number, the program will display a message "Good Work" otherwise
+  // display a message "Not matched".
+
+
+  // userNum =
+
+  const userNum = document.querySelector('.guess');
+  document.addEventListener()
+
+  const userNum = document.querySelector('.guess');
+
+
+
 
 
 });
