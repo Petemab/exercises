@@ -69,29 +69,39 @@ window.addEventListener('DOMContentLoaded', function() {
   // in the Gregorian calendar.
 
 
-  function isLeap(year){
-    if(!year % 100 === 0){
-      console.log('it is not a leap year');
-    } else if(!year % 400 === 0){
-      console.log('it is not a leap year');
-    }else if(!year % 4 === 0){
-      console.log('it is not a leap year');
-    } else {
-      console.log('it is a leap year');
-    }
+  // function isLeap(year){
+  //   if(!year % 100 === 0){
+  //     console.log('it is not a leap year');
+  //   } else if(!year % 400 === 0){
+  //     console.log('it is not a leap year');
+  //   }else if(!year % 4 === 0){
+  //     console.log('it is not a leap year');
+  //   } else {
+  //     console.log('it is a leap year');
+  //   }
+  //
+  // }
 
+  function isLeap(year){
+    if(year % 100 === 0 && year % 100 === 0 && year % 4 === 0){
+      console.log('this is a leap year');
+    } else {
+      console.log('this is not a leap year');
+    }
   }
 
-  isLeap(2018);
-  isLeap(2016);
-  isLeap(2000);
+  isLeap(2004);
+  // isLeap(2004);
+  // isLeap(2000);
 
   // year = window.prompt("Input a Year : ");
   // x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
   // console.log(x);
 
 
+// 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
 
+  
 
 
 });
