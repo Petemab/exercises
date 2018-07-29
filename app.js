@@ -86,5 +86,12 @@ window.addEventListener('DOMContentLoaded', function() {
   isLeap(2016);
   isLeap(2000);
 
+  // year = window.prompt("Input a Year : ");
+  // x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+  // console.log(x);
+
+
+
+
 
 });
