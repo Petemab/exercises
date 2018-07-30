@@ -160,6 +160,15 @@ window.addEventListener('DOMContentLoaded', function() {
   // false
   // true
 
+  document.querySelector('.arrayButton').addEventListener('click', isAnArray);
+  const array = document.querySelector('.isAnArray').value;
 
+  function isAnArray(){
+    console.log(array);
+    // return array.isArray ? console.log(true) : console.log(false);
+  }
+
+  // isAnArray('w3resource');
+  // isAnArray([1, 2, 4, 0]);
 
 });
