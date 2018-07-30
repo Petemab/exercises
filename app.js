@@ -121,10 +121,26 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // userNum =
 
-  const userNum = document.querySelector('.guess');
-  document.addEventListener()
+  const answerField = document.querySelector('.answer');
+  document.querySelector('.guessButton').addEventListener('click', guessNumber);
 
-  const userNum = document.querySelector('.guess');
+
+
+  function guessNumber(){
+    const userNum = parseInt(document.querySelector('.guess').value);
+    console.log(userNum);
+    const myGuess = Math.floor((Math.random() * 10) + 1);
+    console.log(myGuess);
+    if(userNum === myGuess){
+      return answerField.innerHTML = `You guessed correctly. The computer also selected ${userNum}`;
+    } else {
+      return answerField.innerHTML = `You guessed wrong. The computer selected ${myGuess}`;
+    }
+
+  }
+
+
+  // const userNum = document.querySelector('.guess');
 
 
 

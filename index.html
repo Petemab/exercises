@@ -15,9 +15,9 @@
   <p>The string to manipulate = <strong><span id='string'></span></strong></p>
   <button class="stringButton">Click to change string</button>
   <p id="target">w3resource </p>
-  <form class="numberPicker" onsubmit="guessNumber">
-    <input type="number" class="guess" placeholder="number between 1 and 10">
-    <button>submit guess</button>
+  <form class="numberPicker">
+    <input type="number" class="guess" name="guess" min="1" max="10" placeholder="number between 1 and 10">
+    <input type="button" class="guessButton" value="submit">
   </form>
   <p class="answer"></p>
 
