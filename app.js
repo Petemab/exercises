@@ -139,10 +139,26 @@ window.addEventListener('DOMContentLoaded', function() {
 
   }
 
+  // 9. Write a JavaScript program to calculate days left until next Christmas.
 
-  // const userNum = document.querySelector('.guess');
 
+  const christmas = new Date(now.getFullYear(), 11, 25);
+  const daysTilXmas = document.querySelector('.daysTilXmas');
 
+  function daysUntilXmas(){
+    const totalTime = (christmas.getTime() - now.getTime());
+    return daysTilXmas.innerHTML = (Math.ceil(totalTime / 24 / 60 / 60 / 1000));
+
+  }
+
+  daysUntilXmas();
+
+  // 10. Write a JavaScript function to check whether an `input` is an array or not. Go to the editor
+  // Test Data :
+  // console.log(is_array('w3resource'));
+  // console.log(is_array([1, 2, 4, 0]));
+  // false
+  // true
 
 
 
