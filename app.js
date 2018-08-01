@@ -209,8 +209,32 @@ window.addEventListener('DOMContentLoaded', function() {
   findFirst([7, 9, 0],-3);
 
 
+  // 10. Write a JavaScript program to calculate multiplication and division of two
+  // numbers (input from user).
 
 
+  let firstNum = null;
+  let secondNum = null;
+  const calcAnswer = document.querySelector('.calcAnswer');
+  document.querySelector('.multiply').addEventListener('click', multiply);
+  document.querySelector('.divide').addEventListener('click', divide);
+
+  function multiply(){
+    console.log('running');
+    firstNum = parseInt(document.querySelector('#firstNum').value);
+    secondNum = parseInt(document.querySelector('#secondNum').value);
+    console.log(firstNum);
+    console.log(secondNum);
+    const theSolution = firstNum * secondNum;
+    return calcAnswer.innerHTML = theSolution;
+  }
+
+  function divide(){
+    firstNum = parseInt(document.querySelector('#firstNum').value);
+    secondNum = parseInt(document.querySelector('#secondNum').value);
+    const theSolution = firstNum / secondNum;
+    return calcAnswer.innerHTML = theSolution;
+  }
 
 
 
