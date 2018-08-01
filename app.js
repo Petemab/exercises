@@ -99,9 +99,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
 
-
-
-
   function findSundays() {
     for (let year = 2014; year <= 2050; year++) {
       const janFirst = new Date(year, 0, 1);
@@ -118,20 +115,17 @@ window.addEventListener('DOMContentLoaded', function() {
   // matches with guess number, the program will display a message "Good Work" otherwise
   // display a message "Not matched".
 
-
   // userNum =
 
   const answerField = document.querySelector('.answer');
   document.querySelector('.guessButton').addEventListener('click', guessNumber);
 
-
-
-  function guessNumber(){
+  function guessNumber() {
     const userNum = parseInt(document.querySelector('.guess').value);
     console.log(userNum);
     const myGuess = Math.floor((Math.random() * 10) + 1);
     console.log(myGuess);
-    if(userNum === myGuess){
+    if (userNum === myGuess) {
       return answerField.innerHTML = `You guessed correctly. The computer also selected ${userNum}`;
     } else {
       return answerField.innerHTML = `You guessed wrong. The computer selected ${myGuess}`;
@@ -141,11 +135,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // 9. Write a JavaScript program to calculate days left until next Christmas.
 
-
   const christmas = new Date(now.getFullYear(), 11, 25);
   const daysTilXmas = document.querySelector('.daysTilXmas');
 
-  function daysUntilXmas(){
+  function daysUntilXmas() {
     const totalTime = (christmas.getTime() - now.getTime());
     return daysTilXmas.innerHTML = (Math.ceil(totalTime / 24 / 60 / 60 / 1000));
 
@@ -160,15 +153,66 @@ window.addEventListener('DOMContentLoaded', function() {
   // false
   // true
 
-  document.querySelector('.arrayButton').addEventListener('click', isAnArray);
-  const array = document.querySelector('.isAnArray').value;
+  // const findArray = document.querySelector('#isAnArray');
+  // findArray.addEventListener('click', isAnArray);
+  //
+  //
+  // function isAnArray(e){
+  //   e.preventDefault();
+  //   const inputValue = findArray.querySelector('input[type="text"]').value;
+  //   console.log(inputValue);
+  //   if(Array.isArray(inputValue)){
+  //     return console.log(true);
+  //   } else {
+  //     return console.log(false);
+  //   }
+  // }
 
-  function isAnArray(){
-    console.log(array);
-    // return array.isArray ? console.log(true) : console.log(false);
-  }
+  const isArray = input => {
+    if (toString.call(input) === '[object Array]')
+      return true;
+    return false;
+  };
+  console.log(isArray('w3resource'));
+  console.log(isArray([1, 2, 4, 0]));
+
+  // isAnArray();
 
   // isAnArray('w3resource');
   // isAnArray([1, 2, 4, 0]);
+
+  //   3. Write a JavaScript function to get the first element of an array.
+  // Passing a parameter 'n' will return the first 'n' elements of the array. Go to the editor
+  // Test Data :
+  // console.log(first([7, 9, 0, -2]));
+  // console.log(first([],3));
+  // console.log(first([7, 9, 0, -2],3));
+  // console.log(first([7, 9, 0, -2],6));
+  // console.log(first([7, 9, 0, -2],-3));
+  // Expected Output :
+  // 7
+  // []
+  // [7, 9, 0]
+  // [7, 9, 0, -2]
+  // []
+
+  function findFirst(a,n) {
+    if(n === undefined){
+      console.log(a[0]);
+    } else {
+      console.log(a.slice(0,n));
+    }
+  }
+
+  findFirst([7, 9, 0, -2]);
+  findFirst([7, 9, 0, -2],3);
+  findFirst([7, 9, 0],-3);
+
+
+
+
+
+
+
 
 });
